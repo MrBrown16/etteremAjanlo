@@ -1,0 +1,16 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Név" aria-label="Név" aria-describedby="button-addon2" [(ngModel)]="kritika.etterem">
+    <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon2">keres</button> -->
+</div>
+  <!-- <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Kép Url" aria-label="Kép Url" aria-describedby="button-addon2" [(ngModel)]="kritika.kepUrl">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">keres</button> -->
+  <!-- </div> -->
+<div class="input-group mb-3">
+    <textarea type="text" class="form-control" placeholder="Leírás" aria-label="Leírás" aria-describedby="button-addon2" [(ngModel)]="kritika.velemeny"></textarea>
+    <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon2">keres</button> -->
+  </div>
+<!-- <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Ár" aria-label="Ár" aria-describedby="button-addon2" [(ngModel)]="kritika.etterem">
+</div> -->
+<button class="btn primary" type="button" id="button-addon2" (click)="ujKritika()">Mentés</button>

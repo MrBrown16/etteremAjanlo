@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Sign In</h5>
+        <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="button-addon2" [(ngModel)]="user.email">
+            <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="button-addon2" [(ngModel)]="user.password">
+            <button (click)="signIn()" [disabled]="(user.email=='')||(user.password=='')" class="btn btn-primary" type="button" id="button-addon2">Sign In</button>
+        </div>
+        <button (click)="googleAuth()" class="btn btn-primary ms-3" type="button" id="button-addon2">SignIn with Google</button>
+        <button routerLink="/forgotpassword" class="btn btn-primary ms-3" type="button" >Forgot Password</button>
+    </div>
+</div>

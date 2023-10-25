@@ -40,3 +40,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+
+/functions/restaurant-a4ec7-firebase-adminsdk-qz6nj-fd8e7e55d1.json
+src/app/environments.ts

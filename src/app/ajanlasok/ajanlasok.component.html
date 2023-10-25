@@ -1,0 +1,31 @@
+<!-- {{kritikaek|json}} -->
+<div class="input-group mb-3">
+    
+    <button *ngIf="user" (click)="edit=!edit" class="btn btn-warning" type="button" id="button-addon2">Módosít</button>
+    <input type="text" class="form-control" placeholder="Keresés" aria-label="Keresés" aria-describedby="button-addon2" [(ngModel)]="szo">
+    
+  </div>
+<div class="row">
+    <div *ngFor="let kritika of kritikak|filter:szo" class=" col-12 col-md-6 col-lg-4 col-xl-3">
+
+
+          
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{kritika.etterem}}</h5>
+                <p class="card-text">{{kritika.velemeny}}</p>
+            </div>
+            <div *ngIf="edit">
+                <button (click)="torol(kritika)" class="btn btn-danger col-6" type="button" id="button-addon2">Töröl</button>
+                <button (click)="modosit(kritika)" class="btn btn-warning col-6" type="button" id="button-addon2">Módosít</button>
+            </div>
+            <div >
+                <!-- <input class="col-12" type="number" value="1" min="0" placeholder="1" #menyiseg> -->
+                <!-- <button (click)="megrendel(kritika, menyiseg.value)" class="btn btn-primary col-12" type="button" id="button-addon2">{{!megrendeltE(kritika.key)?'Megrendelem':'Módosítom'}}</button> -->
+            
+            <!-- <div class="card-footer" [ngClass]="!megrendeltE(kritika.key)?'':'bg-success'">{{kritika.ar}}</div> -->
+        </div>
+        </div>
+
+    </div>
+</div>
